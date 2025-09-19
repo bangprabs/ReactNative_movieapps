@@ -13,7 +13,7 @@ const SearchBar = ({placeHolder, onPress}: Props) => {
             <Image source={icons.search} className="size-5" resizeMode="contain" tintColor="#ab8bff"/>
             <TextInput
                 onPress={onPress}
-                placeholder={placeHolder} 
+                placeholder={placeHolder}
                 value=""
                 onChangeText={() => {
                 }}
