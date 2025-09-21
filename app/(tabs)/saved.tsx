@@ -14,6 +14,7 @@ import { getFavoriteMovies } from '@/services/appwrite';
 import {icons} from "@/constants/icons";
 import {images} from "@/constants/images";
 import {useFocusEffect} from "@react-navigation/native";
+import AnimatedScreen from '@/components/AnimatedScreen';
 
 const Saved = () => {
     const [movies, setMovies] = useState<any[]>([]);
@@ -64,6 +65,7 @@ const Saved = () => {
     );
 
     return (
+        <AnimatedScreen>
         <View className="flex-1 bg-primary">
             {/* Background Image */}
             <Image source={images.bg} className="absolute w-full h-full z-0" />
@@ -101,6 +103,7 @@ const Saved = () => {
                 </View>
             )}
         </View>
+        </AnimatedScreen>
     );
 };
 

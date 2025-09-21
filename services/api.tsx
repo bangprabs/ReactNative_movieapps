@@ -24,3 +24,18 @@ export const fetchMovies = async ({query}: { query: string }) => {
     const movies = await response.json();
     return movies.results;
 }
+
+export const fetchGithubProfile = async (username: string) => {
+    const response = await fetch(`https://api.github.com/users/${username}`, {
+        method: 'GET',
+        headers: {
+            Accept: 'application/vnd.github.v3+json',
+        },
+    });
+
+    if (!response.ok) {
+        throw new Error(`Failed to fetch GitHub profile: ${response.status}`);
+    }
+
+    return await response.json();
+};

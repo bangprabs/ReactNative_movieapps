@@ -7,6 +7,7 @@ import MovieCard from "@/components/MovieCard";
 import { icons } from "@/constants/icons";
 import SearchBar from "@/components/SearchBar";
 import { updateSearchCount } from "@/services/appwrite";
+import AnimatedScreen from '@/components/AnimatedScreen';
 
 const Search = () => {
     const [searchQuery, setSearchQuery] = useState('');
@@ -37,6 +38,7 @@ const Search = () => {
     }, [searchQuery]);
 
     return (
+        <AnimatedScreen>
         <View className="flex-1 bg-primary">
             <Image source={images.bg} className="flex-1 absolute w-full z-0" resizeMode="cover" />
 
@@ -89,6 +91,7 @@ const Search = () => {
                 }
             />
         </View>
+        </AnimatedScreen>
     );
 };
 

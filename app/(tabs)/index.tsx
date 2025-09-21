@@ -10,6 +10,7 @@ import {getTrendingMovies} from "@/services/appwrite";
 import TrendingCard from "@/components/TrendingCard";
 import {useCallback, useState} from "react";
 import {useFocusEffect} from "@react-navigation/native";
+import AnimatedScreen from "@/components/AnimatedScreen";
 
 export default function Index() {
     const router = useRouter();
@@ -48,6 +49,7 @@ export default function Index() {
     );
 
     return (
+        <AnimatedScreen>
         <View className="flex-1 bg-primary">
             <Image source={images.bg} className="absolute w-full z-0"/>
 
@@ -118,5 +120,6 @@ export default function Index() {
                 )}
             </ScrollView>
         </View>
+        </AnimatedScreen>
     );
 }
